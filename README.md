@@ -7,9 +7,9 @@ _Screenshot of UI - optional_ -->
 
 
 ## TODO
-
-Add in midi-timing library to parse midi into json with absolute times
-Add function inside index to parse through json and run the add marker function for each note. 
+- [X] Create function in Premiere.jsx to handle create markers from time and duration input from panel
+- [ ] Add in midi-timing library to parse midi into json with absolute times
+- [ ] Add function inside index to parse through json and run the add marker function for each note.
 
 ## Setup
 
