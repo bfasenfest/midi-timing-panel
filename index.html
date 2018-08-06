@@ -3,56 +3,28 @@
 	<head>
 		<meta charset="utf-8">
 		<title>MyTest</title>
+		<script type="text/javascript" src="./js/main.js"></script>
+		<link rel="stylesheet" href="./css/style.css">
 		<script type="text/javascript">
-			function traverse() {
-				window.__adobe_cep__.evalScript("$._PPP.traverse_project_items()", callback);
-			}
-			function callback(data) {
-				if (!data || data.length < 0) return;
-				try {
-					var file_paths = JSON.parse(data);
-					console.log(file_paths);
-					document.getElementById("result").innerHTML = file_paths;
-				} catch(error) {
-					console.log(error);
-				}
-			}
-			function createSeq(){
-				console.log("Creating!")
-				window.__adobe_cep__.evalScript("$.PPP.create_sequence()", log);
 
-			}
-			function addMarker(){
-				let time = document.getElementById("time-input").value
-				let duration = document.getElementById("duration-input").value
-				let index = 0
-
-				// Into data you can pass time(in seconds), duration (in seconds), index (integer of midi note index),
-				// name (string, name of marker), and comments (string, marker comments)
-				let data = {time, duration, index}
-
-				window.__adobe_cep__.evalScript("$.PPP.createMarker('" + JSON.stringify(data)+"')", log);
-
-
-			}
-			function logMarkers(){
-				window.__adobe_cep__.evalScript("$.PPP.logMarkers()", log);
-			}
-			function log(data){
-				console.log(data)
-			}
 		</script>
 	</head>
 
 	<body>
-		<a href="javascript:history.go(0)"> <button>Refresh panel</button> </a>
-		<hr>
-		<button onclick='addMarker()'>Add Marker</button>
-		<button onclick='logMarkers()'>Log Marker</button>
-		<hr>
-		Time: <input type="text" id="time-input"> </input>
-		<br>
-		Duration:<input type="text" id="duration-input"> </input>
-		<div id="result"></div>
+		<div class="wrapper">
+			<a href="javascript:history.go(0)"> <button>Refresh panel</button> </a>
+			<hr>
+			<input type="file" id="files" name="files[]" multiple />
+			<output id="list"></output>
+			<button onclick="addMidiMarkers()">Add Markers from MIDI</button>
+			<hr>
+			<!-- <button onclick='addMarkerInput()'>Add Marker</button>
+			<button onclick='logMarkers()'>Log Marker</button>
+			<hr>
+			Time: <input type="text" id="time-input"> </input>
+			<br>
+			Duration:<input type="text" id="duration-input"> </input>
+			<div id="result"></div> -->
+		</div>
 	</body>
 </html>

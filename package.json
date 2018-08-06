@@ -1,0 +1,27 @@
+{
+  "name": "midi-timing-panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "midi-timing": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfasenfest/midi-timing-panel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bfasenfest/midi-timing-panel/issues"
+  },
+  "homepage": "https://github.com/bfasenfest/midi-timing-panel#readme"
+}
