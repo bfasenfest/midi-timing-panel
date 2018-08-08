@@ -1,4 +1,4 @@
-var midiTiming = require('midi-timing');
+var midiTiming = cep_node.require('midi-timing');  
 
 window.onload = function(){
     document.getElementById('files').addEventListener('change', handleFileSelect, false);
